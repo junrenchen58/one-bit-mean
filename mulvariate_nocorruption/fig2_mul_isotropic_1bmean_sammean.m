@@ -1,10 +1,14 @@
-%% This generates Figure 2 in the paper: Corruption-free, multivariate, isotropic
+%% This generates Figure 2 in the paper: Corruption-free, multivariate
+%% We consider a Toeplitz covariance matrix
 
 seed = 500;
 d = 30;
 nlist = 30*(40:10:80);
 len = length(nlist);
 mu = 100*ones(d,1);
+rho = 0.5;
+
+idx = 0:d-1;
 Sigma = eye(d);
 repe = 100;
 errl = zeros(size(nlist));
